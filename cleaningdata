@@ -1,0 +1,10 @@
+import pandas as pd
+
+# load your data into a dataframe
+df = pd.read_csv("C:/Users/modul/Documents/Birkbeck Applied Data Science/Python External Projects/companyL1L2.csv")
+
+# replace all occurrences of "Esq" with an empty string
+df["list_a"] = df["list_a"].str.replace("Esq", "")
+
+# save the modified dataframe to a new file
+df.to_csv("your_modified_file.csv", index=False)
